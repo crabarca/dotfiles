@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/cristobal/.oh-my-zsh
+export ZSH=/home/crab/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -11,6 +11,9 @@ ZSH_THEME="bira"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
+
+# Disable beep
+unsetopt BEEP
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -51,9 +54,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fasd history kubectl)
-
-eval $(thefuck --alias FUCK)
+plugins=(git fasd history)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -98,7 +99,7 @@ export GRB_LICENSE_FILE=/opt/gurobi800/gurobi.lic
 export PATH
 
 # Map caps-lock to esc key
-setxkbmap -option caps:swapescape
+# setxkbmap -option caps:swapescape
 
 ## Aliases
 alias zshrc="vim ~/.zshrc"

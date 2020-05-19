@@ -1,4 +1,5 @@
 set number
+set visualbell
 highlight Cursor guifg=white guibg=black
 highlight iCursor guifg=white guibg=steelblue
 set guicursor=n-v-c:block-Cursor
