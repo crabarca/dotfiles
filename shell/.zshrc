@@ -90,21 +90,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-path+=('/usr/local/MATLAB/R2017a/bin' $path)
-export GUROBI_HOME="/opt/gurobi800/linux64"
-export PATH="${PATH}:${GUROBI_HOME}/bin"
-export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
-export GRB_LICENSE_FILE=/opt/gurobi800/gurobi.lic
-export PATH
-
-# Map caps-lock to esc key
-setxkbmap -option caps:swapescape
-
 ## Aliases
 alias zshrc="vim ~/.zshrc"
-
-# Thrash
-alias thrash-empty="rm -rf ~/.local/share/Thrash/*"
 
 # Python
 alias python3="python3.7"
@@ -122,7 +109,6 @@ alias imageprune="docker rmi $(docker images --filter "dangling=true" -q --no-tr
 
 
 alias cl="clear"
-alias nt="nautilus"
 alias activate=". venv/bin/activate"
 alias hg="history | grep"
 
@@ -135,11 +121,6 @@ alias k='kubectl'
 alias gpo='get pods -o wide'
 alias gno='get nodes -o wide'
 
-# tabtab source for electron-forge package
-# uninstall by removing these lines or running `tabtab uninstall electron-forge`
-[[ -f /home/cristobal/Documents/classroom-assistant/node_modules/tabtab/.completions/electron-forge.zsh ]] && . /home/cristobal/Documents/classroom-assistant/node_modules/tabtab/.completions/electron-forge.zsh
-# Config for dotfiles, now so used yet
-alias config='/usr/bin/git --git-dir=/home/cristobal/.dotfiles/ --work-tree=/home/cristobal'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
