@@ -1,8 +1,6 @@
 #!/bin/bash
 
-
-## 
-
+# Define base folder for config files
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Links for dev folder
