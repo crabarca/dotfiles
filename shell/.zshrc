@@ -1,6 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH=/home/cristobal/.oh-my-zsh
 
@@ -71,11 +68,8 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -83,33 +77,31 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-## Aliases
+## Zshrc aliases
 alias zshrc="vim ~/.zshrc"
 
-# Python
+# Python aliases
 alias python3="python3.7"
 
-# Terraform
+# Terraform aliases
 alias terra="terraform"
 
-# Docker compose
+# Docker-compose aliases
 alias dc="docker-compose"
 alias dce="docker-compose exec"
 alias dcr="docker-compose run"
 
-# Docker
+# Docker helpers
 alias imageprune="docker rmi $(docker images --filter "dangling=true" -q --no-trunc)"
 
-
+# General aliases
 alias cl="clear"
-alias activate=". venv/bin/activate"
 alias hg="history | grep"
 
 # Kubectl autocompletition
