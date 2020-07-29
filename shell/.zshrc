@@ -86,9 +86,6 @@ export NVM_DIR="$HOME/.nvm"
 ## Zshrc aliases
 alias zshrc="vim ~/.zshrc"
 
-# Python aliases
-alias python3="python3.7"
-
 # Terraform aliases
 alias terra="terraform"
 
