@@ -26,7 +26,7 @@ ZSH_THEME="bira"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -39,7 +39,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+# HIST_STAMPS="dd.mm.yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -48,7 +48,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fasd history kubectl)
+plugins=(git fasd history)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,14 +99,8 @@ alias imageprune="docker rmi $(docker images --filter "dangling=true" -q --no-tr
 alias cl="clear"
 alias hg="history | grep"
 
-# Kubectl autocompletition
-source <(kubectl completion zsh | sed 's/kubectl/k/g')
-
-# K3s kubectl alias
-alias k3k='k3s kubectl '
-alias k='kubectl'
-alias gpo='get pods -o wide'
-alias gno='get nodes -o wide'
+# Poetry
+source $HOME/.poetry/env
 
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -116,3 +110,4 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv virtualenv-init -)"
 fi
 
+test -e /Users/cristobal/.iterm2_shell_integration.zsh && source /Users/cristobal/.iterm2_shell_integration.zsh || true
