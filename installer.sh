@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+# Todo install shell here
+
+# Install shell plugins
+
 # Define base folder for config files
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
