@@ -102,6 +102,9 @@ alias hg="history | grep"
 # Poetry
 source $HOME/.poetry/env
 
+# Python version
+export PYENV_VERSION=3.9.1
+
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -111,3 +114,15 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 test -e /Users/cristobal/.iterm2_shell_integration.zsh && source /Users/cristobal/.iterm2_shell_integration.zsh || true
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export PATH="$HOME/.poetry/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/cristobal/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/cristobal/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/cristobal/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/cristobal/google-cloud-sdk/completion.zsh.inc'; fi
